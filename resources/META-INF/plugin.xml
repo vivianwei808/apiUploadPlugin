@@ -1,0 +1,32 @@
+<idea-plugin>
+  <id>pmoApiUpload</id>
+  <name>pmoApiUpload</name>
+  <version>1.0</version>
+  <vendor email="wangweiG79@pingan.com.cn" url="http://www.vivianwei808.top">wangwei</vendor>
+
+  <description><![CDATA[
+      upload api to pmo-api.<br>
+      <em> </em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      v1.0.<br>
+      <em>fork YapiIdeaUploadPlugin 1.7.9</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.java</depends>
+
+  <actions>
+    <action id="uploadToPmoApi" class="com.qbb.interaction.UploadToYapi" text="Upload To Pmo-Api"
+            description="uploadToPmoApi">
+      <add-to-group group-id="EditorLangPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="meta U"/>
+    </action>
+  </actions>
+</idea-plugin>
