@@ -787,7 +787,7 @@ public class BuildJsonForYapi {
      * @date: 2019/5/15
      */
     public static void getField(PsiField field, Project project, KV kv, String[] childType, Integer index, Set<String> pNames) {
-        if (field.getModifierList().hasModifierProperty("final")) {
+        if (field.getModifierList().hasModifierProperty("final") || field.getModifierList().hasModifierProperty("static")) {
             return;
         }
         PsiType type = field.getType();
